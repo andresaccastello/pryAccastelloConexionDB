@@ -33,6 +33,32 @@ namespace pryAccastelloConexionDB
             cmbCategoria.SelectedIndex = -1;        // Opcional, para que no haya nada seleccionado al inicio
             int idCategoria = Convert.ToInt32(cmbCategoria.SelectedValue);
 
+
+            // Suscribir los eventos de cambio
+            txtNombre.TextChanged += new EventHandler(ControlCambio);
+            txtDescripcion.TextChanged += new EventHandler(ControlCambio);
+            cmbCategoria.SelectedIndexChanged += new EventHandler(ControlCambio);
+            numPrecio.ValueChanged += new EventHandler(ControlCambio);
+            numStock.ValueChanged += new EventHandler(ControlCambio);
+
+            // Validar al iniciar el formulario
+            ValidarCampos();
+        }
+        private void ControlCambio(object sender, EventArgs e)
+        {
+            ValidarCampos();
+        }
+
+        private void ValidarCampos()
+        {
+            bool camposCompletos =
+           !string.IsNullOrWhiteSpace(txtNombre.Text) &&
+           !string.IsNullOrWhiteSpace(txtDescripcion.Text) &&
+           cmbCategoria.SelectedIndex >= 0 &&
+           numPrecio.Value > 0 &&
+           numStock.Value > 0;
+
+            btnModificar.Enabled = camposCompletos;
         }
 
 

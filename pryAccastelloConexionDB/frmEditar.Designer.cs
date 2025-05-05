@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditar));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grbID = new System.Windows.Forms.GroupBox();
             this.numBuscarId = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
             this.btnSalir = new System.Windows.Forms.Button();
             this.dgvGrilla = new System.Windows.Forms.DataGridView();
             this.grbCarga = new System.Windows.Forms.GroupBox();
@@ -40,7 +40,7 @@
             this.numStock = new System.Windows.Forms.NumericUpDown();
             this.btnModificar = new System.Windows.Forms.Button();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblStock = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
@@ -48,7 +48,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
+            this.grbID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBuscarId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.grbCarga.SuspendLayout();
@@ -56,18 +56,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).BeginInit();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // grbID
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.groupBox1.Controls.Add(this.numBuscarId);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnSalir);
-            this.groupBox1.Location = new System.Drawing.Point(463, 7);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 64);
-            this.groupBox1.TabIndex = 23;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Buscar Producto";
+            this.grbID.BackColor = System.Drawing.SystemColors.Window;
+            this.grbID.Controls.Add(this.numBuscarId);
+            this.grbID.Controls.Add(this.lblID);
+            this.grbID.Controls.Add(this.btnSalir);
+            this.grbID.Location = new System.Drawing.Point(463, 7);
+            this.grbID.Name = "grbID";
+            this.grbID.Size = new System.Drawing.Size(200, 64);
+            this.grbID.TabIndex = 23;
+            this.grbID.TabStop = false;
+            this.grbID.Text = "Buscar Producto";
             // 
             // numBuscarId
             // 
@@ -76,14 +76,14 @@
             this.numBuscarId.Size = new System.Drawing.Size(100, 20);
             this.numBuscarId.TabIndex = 21;
             // 
-            // label1
+            // lblID
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "ID";
+            this.lblID.AutoSize = true;
+            this.lblID.Location = new System.Drawing.Point(17, 29);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(18, 13);
+            this.lblID.TabIndex = 19;
+            this.lblID.Text = "ID";
             // 
             // btnSalir
             // 
@@ -121,7 +121,7 @@
             this.grbCarga.Controls.Add(this.numStock);
             this.grbCarga.Controls.Add(this.btnModificar);
             this.grbCarga.Controls.Add(this.cmbCategoria);
-            this.grbCarga.Controls.Add(this.label5);
+            this.grbCarga.Controls.Add(this.lblCategoria);
             this.grbCarga.Controls.Add(this.btnEliminar);
             this.grbCarga.Controls.Add(this.lblStock);
             this.grbCarga.Controls.Add(this.lblPrecio);
@@ -189,14 +189,14 @@
             this.cmbCategoria.Size = new System.Drawing.Size(133, 21);
             this.cmbCategoria.TabIndex = 14;
             // 
-            // label5
+            // lblCategoria
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(-3, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Categoria";
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(-3, 136);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(52, 13);
+            this.lblCategoria.TabIndex = 13;
+            this.lblCategoria.Text = "Categoria";
             // 
             // btnEliminar
             // 
@@ -267,14 +267,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 475);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grbID);
             this.Controls.Add(this.dgvGrilla);
             this.Controls.Add(this.grbCarga);
             this.Name = "frmEditar";
             this.Text = "frmEditar";
             this.Load += new System.EventHandler(this.frmEditar_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.grbID.ResumeLayout(false);
+            this.grbID.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBuscarId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
             this.grbCarga.ResumeLayout(false);
@@ -287,9 +287,9 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grbID;
         private System.Windows.Forms.NumericUpDown numBuscarId;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.DataGridView dgvGrilla;
         private System.Windows.Forms.GroupBox grbCarga;
@@ -298,7 +298,7 @@
         private System.Windows.Forms.NumericUpDown numStock;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.ComboBox cmbCategoria;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrecio;

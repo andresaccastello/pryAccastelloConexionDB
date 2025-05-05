@@ -33,8 +33,8 @@
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.grbLogin = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl1 = new System.Windows.Forms.Label();
+            this.lblLoginCon = new System.Windows.Forms.Label();
+            this.lblLoginNom = new System.Windows.Forms.Label();
             this.grbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +49,7 @@
             // 
             this.txtContraseña.Location = new System.Drawing.Point(90, 64);
             this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 1;
             // 
@@ -67,8 +68,8 @@
             // grbLogin
             // 
             this.grbLogin.BackColor = System.Drawing.Color.Khaki;
-            this.grbLogin.Controls.Add(this.label2);
-            this.grbLogin.Controls.Add(this.lbl1);
+            this.grbLogin.Controls.Add(this.lblLoginCon);
+            this.grbLogin.Controls.Add(this.lblLoginNom);
             this.grbLogin.Controls.Add(this.txtContraseña);
             this.grbLogin.Controls.Add(this.btnIngresar);
             this.grbLogin.Controls.Add(this.txtUsuario);
@@ -79,23 +80,23 @@
             this.grbLogin.TabStop = false;
             this.grbLogin.Text = "LOGUEARSE";
             // 
-            // label2
+            // lblLoginCon
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 71);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Contraseña";
+            this.lblLoginCon.AutoSize = true;
+            this.lblLoginCon.Location = new System.Drawing.Point(7, 71);
+            this.lblLoginCon.Name = "lblLoginCon";
+            this.lblLoginCon.Size = new System.Drawing.Size(61, 13);
+            this.lblLoginCon.TabIndex = 4;
+            this.lblLoginCon.Text = "Contraseña";
             // 
-            // lbl1
+            // lblLoginNom
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(7, 43);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(44, 13);
-            this.lbl1.TabIndex = 3;
-            this.lbl1.Text = "Nombre";
+            this.lblLoginNom.AutoSize = true;
+            this.lblLoginNom.Location = new System.Drawing.Point(7, 43);
+            this.lblLoginNom.Name = "lblLoginNom";
+            this.lblLoginNom.Size = new System.Drawing.Size(44, 13);
+            this.lblLoginNom.TabIndex = 3;
+            this.lblLoginNom.Text = "Nombre";
             // 
             // frmLogin
             // 
@@ -118,7 +119,7 @@
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.GroupBox grbLogin;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label lblLoginCon;
+        private System.Windows.Forms.Label lblLoginNom;
     }
 }

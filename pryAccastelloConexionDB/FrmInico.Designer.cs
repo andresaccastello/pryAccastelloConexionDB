@@ -64,7 +64,6 @@
             this.dgvGrilla.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvGrilla.Size = new System.Drawing.Size(637, 330);
             this.dgvGrilla.TabIndex = 15;
-         
             // 
             // grbCarga
             // 
@@ -83,7 +82,7 @@
             this.grbCarga.Controls.Add(this.txtDescripcion);
             this.grbCarga.Location = new System.Drawing.Point(12, 85);
             this.grbCarga.Name = "grbCarga";
-            this.grbCarga.Size = new System.Drawing.Size(200, 297);
+            this.grbCarga.Size = new System.Drawing.Size(200, 330);
             this.grbCarga.TabIndex = 13;
             this.grbCarga.TabStop = false;
             this.grbCarga.Text = "Cargar Datos";
