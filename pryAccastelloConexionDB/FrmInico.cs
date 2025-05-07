@@ -80,95 +80,8 @@ namespace pryAccastelloConexionDB
                 categoriaId
             );
 
-            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Contactos");
+            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Categorias");
         }
-
-
-       /* private void dgvGrilla_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btnCargar.Enabled = false;
-            btnModificar.Enabled = true;
-            btnEliminar.Enabled = true;
-            numBuscarId.Value = 0;
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow fila = dgvGrilla.Rows[e.RowIndex];
-
-                // Guardamos el Código del producto para luego usarlo en la modificación
-                codigoSeleccionado = Convert.ToInt32(fila.Cells["Codigo"].Value);
-
-                // Cargamos los valores en los controles
-                txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
-                txtDescripcion.Text = fila.Cells["Descripcion"].Value.ToString();
-                numPrecio.Value = Convert.ToDecimal(fila.Cells["Precio"].Value);
-                numStock.Value = Convert.ToInt32(fila.Cells["Stock"].Value);
-                cmbCategoria.SelectedValue = fila.Cells["CategoriaId"].Value;
-            }
-            btnCargar.Enabled = false;
-        }*/
-
-       /* private void btnModificar_Click(object sender, EventArgs e)
-        {
-            if (codigoSeleccionado == -1)
-            {
-                MessageBox.Show("Seleccioná un producto para modificar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            string nombre = txtNombre.Text;
-            string descripcion = txtDescripcion.Text;
-            decimal precio = numPrecio.Value;
-            int stock = (int)numStock.Value;
-            string categoriaId = cmbCategoria.SelectedValue.ToString();
-
-            // Llamar al método que actualiza en la base de datos
-            objConexion.ModificarProducto(
-                codigoSeleccionado,
-                nombre,
-                descripcion,
-                precio,
-                stock,
-                categoriaId
-            );
-
-            // Actualizar la grilla
-            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Contactos");
-
-            // Limpiar los controles
-            codigoSeleccionado = -1;
-            txtNombre.Clear();
-            txtDescripcion.Clear();
-            numPrecio.Value = 0;
-            numStock.Value = 0;
-            cmbCategoria.SelectedIndex = -1;
-        }*/
-       
-       /* private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            if (codigoSeleccionado == -1)
-            {
-                MessageBox.Show("Seleccioná un producto para eliminar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            // Confirmación
-            var resultado = MessageBox.Show("¿Estás seguro de que querés eliminar este producto?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (resultado == DialogResult.Yes)
-            {
-                objConexion.EliminarProducto(codigoSeleccionado);
-
-                // Actualizar la grilla
-                dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Productos");
-
-                // Limpiar controles
-                codigoSeleccionado = -1;
-                txtNombre.Clear();
-                txtDescripcion.Clear();
-                numPrecio.Value = 0;
-                numStock.Value = 0;
-                cmbCategoria.SelectedIndex = -1;
-            }
-        }*/
 
         private void btnDesacer_Click(object sender, EventArgs e)
         {
@@ -190,12 +103,16 @@ namespace pryAccastelloConexionDB
 
             // Quitar selección del DataGridView
             dgvGrilla.ClearSelection();
-            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Contactos");
+            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Productos");
 
             // Resetear el identificador seleccionado
             codigoSeleccionado = -1;
         }
 
-       
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace pryAccastelloConexionDB
     {
 
         //cadena de conexion
-        string cadenaConexion = "Server=localhost\\SQLEXPRESS;Database=Comercio;Trusted_Connection=True";
+        string cadenaConexion = "Server=localhost;Database=Comercio;Trusted_Connection=True";
 
         //conector
         SqlConnection coneccionBaseDatos;
@@ -51,7 +51,7 @@ namespace pryAccastelloConexionDB
             {
                 using (SqlConnection conexion = new SqlConnection(cadenaConexion))
                 {
-                    string consulta = $"SELECT * FROM {"Productos"}";
+                    string consulta = $"SELECT * FROM Productos";
                     using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
                         conexion.Open();

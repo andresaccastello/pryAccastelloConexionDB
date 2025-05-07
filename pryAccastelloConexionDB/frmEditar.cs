@@ -108,7 +108,7 @@ namespace pryAccastelloConexionDB
             );
 
             // Actualizar la grilla
-            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Contactos");
+            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Productos");
 
             // Limpiar los controles
             codigoSeleccionado = -1;
@@ -167,7 +167,7 @@ namespace pryAccastelloConexionDB
 
             // Quitar selección del DataGridView
             dgvGrilla.ClearSelection();
-            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Contactos");
+            dgvGrilla.DataSource = objConexion.ObtenerDatosTabla("Productos");
 
             // Resetear el identificador seleccionado
             codigoSeleccionado = -1;
@@ -192,24 +192,20 @@ namespace pryAccastelloConexionDB
                 numStock.Value = Convert.ToInt32(fila["Stock"]);
                 cmbCategoria.SelectedValue = fila["CategoriaId"];
 
-                /* Desactivar controles
-                txtNombre.ReadOnly = false;
-                txtDescripcion.ReadOnly = false;
-                numPrecio.Enabled = false;
-                numStock.Enabled = false;
-                cmbCategoria.Enabled = false;
-                */
-
-
-
-
-                // Mostrar solo ese registro en el DataGridView
+                
                 dgvGrilla.DataSource = resultado;
             }
             else
             {
                 MessageBox.Show("No se encontró un producto con ese ID.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+     
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     

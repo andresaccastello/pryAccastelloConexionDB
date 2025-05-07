@@ -43,6 +43,7 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).BeginInit();
             this.grbCarga.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPrecio)).BeginInit();
@@ -198,11 +199,24 @@
             this.txtDescripcion.Size = new System.Drawing.Size(133, 20);
             this.txtDescripcion.TabIndex = 5;
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.IndianRed;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button2.Location = new System.Drawing.Point(845, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(40, 41);
+            this.button2.TabIndex = 17;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmInicio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(941, 472);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.dgvGrilla);
             this.Controls.Add(this.grbCarga);
             this.Name = "frmInicio";
@@ -233,6 +247,7 @@
         private System.Windows.Forms.NumericUpDown numStock;
         private System.Windows.Forms.NumericUpDown numPrecio;
         private System.Windows.Forms.Button btnDesacer;
+        private System.Windows.Forms.Button button2;
     }
 }
 

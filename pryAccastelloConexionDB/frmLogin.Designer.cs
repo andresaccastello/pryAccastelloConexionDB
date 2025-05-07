@@ -35,6 +35,7 @@
             this.grbLogin = new System.Windows.Forms.GroupBox();
             this.lblLoginCon = new System.Windows.Forms.Label();
             this.lblLoginNom = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.grbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +58,7 @@
             // 
             this.btnIngresar.Image = ((System.Drawing.Image)(resources.GetObject("btnIngresar.Image")));
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btnIngresar.Location = new System.Drawing.Point(10, 103);
+            this.btnIngresar.Location = new System.Drawing.Point(22, 103);
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(201, 36);
             this.btnIngresar.TabIndex = 2;
@@ -68,14 +69,15 @@
             // grbLogin
             // 
             this.grbLogin.BackColor = System.Drawing.Color.Khaki;
+            this.grbLogin.Controls.Add(this.button1);
             this.grbLogin.Controls.Add(this.lblLoginCon);
             this.grbLogin.Controls.Add(this.lblLoginNom);
             this.grbLogin.Controls.Add(this.txtContraseña);
             this.grbLogin.Controls.Add(this.btnIngresar);
             this.grbLogin.Controls.Add(this.txtUsuario);
-            this.grbLogin.Location = new System.Drawing.Point(264, 100);
+            this.grbLogin.Location = new System.Drawing.Point(264, 89);
             this.grbLogin.Name = "grbLogin";
-            this.grbLogin.Size = new System.Drawing.Size(228, 145);
+            this.grbLogin.Size = new System.Drawing.Size(250, 156);
             this.grbLogin.TabIndex = 3;
             this.grbLogin.TabStop = false;
             this.grbLogin.Text = "LOGUEARSE";
@@ -98,6 +100,18 @@
             this.lblLoginNom.TabIndex = 3;
             this.lblLoginNom.Text = "Nombre";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.IndianRed;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button1.Location = new System.Drawing.Point(210, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 41);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +121,7 @@
             this.Controls.Add(this.grbLogin);
             this.Name = "frmLogin";
             this.Text = "frmLogin";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.grbLogin.ResumeLayout(false);
             this.grbLogin.PerformLayout();
             this.ResumeLayout(false);
@@ -121,5 +136,6 @@
         private System.Windows.Forms.GroupBox grbLogin;
         private System.Windows.Forms.Label lblLoginCon;
         private System.Windows.Forms.Label lblLoginNom;
+        private System.Windows.Forms.Button button1;
     }
 }

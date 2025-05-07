@@ -20,7 +20,7 @@ namespace pryAccastelloConexionDB
         
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            string connectionString = "Server=localhost\\SQLEXPRESS;Database=Comercio;Trusted_Connection=True";
+            string connectionString = "Server=localhost;Database=Comercio;Trusted_Connection=True";
             string username = txtUsuario.Text;
             string password = txtContraseña.Text;
             int intentosFallidos = 0;
@@ -62,6 +62,16 @@ namespace pryAccastelloConexionDB
                     MessageBox.Show("Error al conectar con la base de datos: " + ex.Message);
                 }
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

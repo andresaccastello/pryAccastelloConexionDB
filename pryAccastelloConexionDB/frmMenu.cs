@@ -36,5 +36,12 @@ namespace pryAccastelloConexionDB
             frmEditar ventanaDatos = new frmEditar();
             ventanaDatos.ShowDialog();
         }
+
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
